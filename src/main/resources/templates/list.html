@@ -13,7 +13,6 @@
 
         <table class="centeredTable">
             <tr>
-<!--&lt;!&ndash;                <th>All</th>&ndash;&gt;-->
                 <th th:block th:each="column : ${columns}" th:text="${column.value}"></th>
             </tr>
             <tr>
@@ -36,45 +35,3 @@
 
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<!--                <th:block th:each="column : ${columns}">-->
-<!--                    <th th:text = "${column.value}"></th>-->
-<!--                </th:block>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>All</td>-->
-<!--                <td>-->
-<!--                    <ul>-->
-<!--                        <li>-->
-<!--                            <a th:href="@{/list/jobs(column='all', value='all')}">View All</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--            <tr th:each="category : ${tableChoices}">-->
-<!--                <td th:text="${category.key}"></td>-->
-<!--                <td>-->
-<!--                &lt;!&ndash; TODO #2: Complete the View Jobs By Category Table. &ndash;&gt;-->
-<!--&lt;!&ndash;//                <td></td> &lt;!&ndash; Feel free to remove or modify this element if necessary. &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;//  //              <td th:each="category : ${tableChoices}">&ndash;&gt;-->
-<!--                    <ul>-->
-<!--                        <li th:each="item : ${category.value}">-->
-<!--                            <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--        </table>-->
-
-<!--    </body>-->
-<!--</html>-->
