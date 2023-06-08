@@ -11,21 +11,23 @@
             <h2 class = "centered">View Jobs By Category</h2>
         </div>
 
-        <table class="centeredTable">
+        <table class="centered-table">
             <tr>
-                <th:block th:each="column : ${columns}">
-                    <th th:text = "${column.value}"></th>
-                </th:block>
+                <th></th>
+                <th th:block th:each="column : ${columns}" th:text="${column.value}"></th>
             </tr>
             <tr>
-                <!-- TODO #2: Complete the View Jobs By Category Table. -->
-
-                <td></td> <!-- Feel free to remove or modify this element if necessary. -->
-
-                <td th:each="category : ${tableChoices}">
+                <td>
                     <ul>
-                        <li th:each="item : ${category.value}">
-                            <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
+                        <li>
+                            <a th:href="@{/list/jobs(column='all', value='all')}">View All</a>
+                        </li>
+                    </ul>
+                </td>
+                <td th:block th:each="column : ${columns}">
+                    <ul>
+                        <li th:each="item : ${tableChoices[column.key]}">
+                            <a th:href="@{/list/jobs(column=${column.key}, value=${item})}" th:text="${item}"></a>
                         </li>
                     </ul>
                 </td>
