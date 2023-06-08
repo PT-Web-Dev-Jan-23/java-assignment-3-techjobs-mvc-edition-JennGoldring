@@ -11,8 +11,9 @@
             <h2 class = "centered">View Jobs By Category</h2>
         </div>
 
-        <table class="centeredTable">
+        <table class="job-listing">
             <tr>
+                <th></th>
                 <th th:block th:each="column : ${columns}" th:text="${column.value}"></th>
             </tr>
             <tr>
